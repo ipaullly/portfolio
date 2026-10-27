@@ -2,8 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Paul Morogo</title>
+    <meta name="description" content="Paul Morogo — Senior Frontend Engineer, UI/UX Designer and Web Consultant based in Kenya. Portfolio of React, Redux and Tailwind CSS work." />
+    <meta property="og:title" content="Paul Morogo — Senior Frontend Engineer" />
+    <meta property="og:description" content="Portfolio of React, Redux and Tailwind CSS work by Paul Morogo." />
+    <meta property="og:image" content="https://res.cloudinary.com/stylika/image/upload/v1633605821/editedProf_vy9rfb.jpg" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="images/octopus-2.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://use.fontawesome.com">
+    <link rel="preconnect" href="https://res.cloudinary.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -11,16 +25,11 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Forum&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Forum&family=Bebas+Neue&family=Oswald:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
   <body>
@@ -49,81 +58,84 @@
           </li>
         </ul>
       </nav>
-      <div class="landing-text">
-        <h1 id="landingTitle" class="landing-text-title">Paul Morogo</h1>
-        <h6>
-          <span class="replace-me">
-            Senior Frontend Engineer, UI/UX Designer, Web Consultant
-            <!-- </span> -->
-          </span>
-        </h6>  
+      <div class="container hero">
+        <div class="landing-text">
+          <h1 id="landingTitle" class="landing-text-title">Paul Morogo</h1>
+          <h6>
+            <span class="replace-me">Senior Frontend Engineer, UI/UX Designer, Web Consultant</span>
+          </h6>
+        </div>
+        <div class="about-side-panel">
+          <div class="about-spirit-animal">
+            <div class="about-spirit-animal-title">
+              <h1>Spirit Animal</h1>
+              <span>Octopus</span>
+            </div>
+            <div class="about-spirit-animal-icon">
+              <img
+                src="images/octopus-2.svg"
+                alt="octopus"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="about-spirit-animal">
+            <div class="about-spirit-animal-title">
+              <h1>Interests</h1>
+              <span>History, </span>
+              <span>Gaming, Reading</span>
+            </div>
+          </div>
+          <div class="social-media">
+            <ul class="nav-list">
+              <li>
+                <a
+                  target="_blank"
+                  href="https://github.com/ipaullly"
+                  class="icon-link"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/paul-morogo-461602137/"
+                  class="icon-link"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <section class="about" id="about">
       <div class="container about-spacing">
         <div class="profile-img" data-aos="fade-right" data-aos-delay="200">
           <img
-            src="https://res.cloudinary.com/stylika/image/upload/v1633605821/editedProf_vy9rfb.jpg"
-            alt="profile"
+            src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1633605821/editedProf_vy9rfb.jpg"
+            alt="Paul Morogo profile photo"
+            fetchpriority="high"
           />
         </div>
         <div class="about-details" data-aos="fade-left" data-aos-delay="400">
-          <div class="about-panel">  
-            <div class="about-heading">
-              <h1>About</h1>
-              <h6>Myself</h6>
-            </div>
-            <div class="about-brief">
-              <p>
-                I graduated with a BSc. in Mechatronics Engineering from Dedan Kimathi University of Tech. in early 2018.
-              </p>
-              <p>
-                With prior exposure to programming from community events in campus, I decided to sharpen and up skill my <strong>HTML/CSS</strong> and <strong>Python</strong> knowledge. 
-              </p>
-              <p>I landed my first job at Andela as a fullstack developer in 2019. It was there that I transitioned to focusing on frontend development with an emphasis in <strong>React/Redux</strong>, <strong>Angular/RxJS</strong> & <strong>Bootstrap/TailwindCSS/Ant Design</strong>.</p>
-              <p>I have built frontend solutions with a variety of Technologies for <strong>(7+ yrs)</strong> and currently working fulltime at BuuPass Kenya.</p>
-            </div>
-            <div class="social-media">
-              <ul class="nav-list">
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://github.com/ipaullly"
-                    class="icon-link"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.linkedin.com/in/paul-morogo-461602137/"
-                    class="icon-link"
-                  >
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="about-side-panel">
-            <div class="about-spirit-animal">
-              <div class="about-spirit-animal-title">
-                <h1>Spirit Animal</h1>
-                <span>Octopus</span>
+          <div class="about-panel">
+            <div class="about-text">
+              <div class="about-heading">
+                <h1>About</h1>
+                <h6>Myself</h6>
               </div>
-              <div class="about-spirit-animal-icon">
-                <img
-                  src="images/octopus-2.svg"
-                  alt="octopus"
-                />
-              </div>
-            </div>
-            <div class="about-spirit-animal">
-              <div class="about-spirit-animal-title">
-                <h1>Interests</h1>
-                <span>History, </span>
-                <span>Gaming, Reading</span>
+              <div class="about-brief">
+                <p>
+                  I graduated with a BSc. in Mechatronics Engineering from Dedan Kimathi University of Tech. in early 2018.
+                </p>
+                <p>
+                  With prior exposure to programming from community events in campus, I decided to sharpen and up skill my <strong>HTML/CSS</strong> and <strong>Python</strong> knowledge.
+                </p>
+                <p>I landed my first job at Andela as a fullstack developer in 2019. It was there that I transitioned to focusing on frontend development with an emphasis in <strong>React/Redux</strong>, <strong>Angular/RxJS</strong> & <strong>Bootstrap/TailwindCSS/Ant Design</strong>.</p>
+                <p>I have built frontend solutions with a variety of Technologies for <strong>(7+ yrs)</strong> and currently working fulltime at BuuPass Kenya.</p>
               </div>
             </div>
           </div>
@@ -167,6 +179,7 @@
               <img
                 src="images/tailwind.svg"
                 alt="tailwind"
+                loading="lazy"
               />
             </div>
             <h1>Tailwind</h1>
@@ -175,7 +188,8 @@
             <div class="icon-container">
               <img
                 src="images/bootstrap.svg"
-                alt="tailwind"
+                alt="bootstrap"
+                loading="lazy"
               />
             </div>
             <h1>Bootstrap</h1>
@@ -200,15 +214,6 @@
               <i class="fab fa-wordpress"></i>
             </div>
             <h1>Wordpress</h1>
-          </div>
-        </div>
-        <span>Basic</span>
-        <div class="my-basic-skills">
-          <div class="skill" data-aos="fade-in" data-aos-delay="600">
-            <div class="icon-container">
-              <i class="fab fa-css3-alt"></i>
-            </div>
-            <h1>Figma</h1>
           </div>
           <div class="skill" data-aos="fade-in" data-aos-delay="700">
             <div class="icon-container">
@@ -240,6 +245,55 @@
             <div
               class="portfolio-description"
             >
+              <h1>Gavanpass booking tool</h1>
+              <h6>Front-end/Angular/Bootstrap</h6>
+              <p>
+                This is a web app that allows corporates/organizations to manage the bookings & approvals of flights, hotels & car rentals for their employees and guests.
+              </p>
+              <a href="https://gavanpass.com/portal/accounts" target="_blank">
+                <span>Visit</span>
+              </a>
+            </div>
+            <div
+              class="portfolio-description"
+            >
+              <h2>Key Features</h2>
+              <ul>
+                 <li>Corporate dashboard for managing bookings and approvals</li>
+                 <li>Corporate admins can access reports and analytics</li>
+                 <li>Corporates can create departments and manage users</li>
+              </ul>
+            </div>
+          </div>
+          <div class="portfolio-media">
+            <div class="card-gavanpass-carousel">
+              <div class="my-gavanpass-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_800/v1793093820/Screenshot_2026-10-27_at_12.18.38_oxksfr.png"
+                alt="Gavanpass landing screen"
+                loading="lazy"
+              /></div>
+              <div class="my-gavanpass-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_800/v1793093820/Screenshot_2026-10-27_at_12.20.14_jy1ltk.png"
+                alt="Gavanpass trips screen"
+                loading="lazy"
+              /></div>
+              <div class="my-gavanpass-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_800/v1793093820/Screenshot_2026-10-27_at_12.26.57_vprx46.png"
+                alt="Gavanpass admin screen"
+                loading="lazy"
+              /></div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div 
+            class="portfolio-description-row"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
+            <div
+              class="portfolio-description"
+            >
               <h1>Shukran PWA</h1>
               <h6>Front-end/React/Redux/Tailwind</h6>
               <p>
@@ -263,40 +317,49 @@
               </ul>
             </div>
           </div>
-          <div class="card-shukran-carousel">
-            <div class="my-shukran-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660925021/login_lwtt93.jpg"
-              alt="train"
-            /></div>
-            <div class="my-shukran-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660925022/dashboard_xqrjeh.jpg"
-              alt="train"
-            /></div>
-            <div class="my-shukran-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660925022/search_sw_yvziql.jpg"
-              alt="train"
-            /></div>
-            <div class="my-shukran-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660925022/amount_select_tdz7jp.jpg"
-              alt="train"
-            /></div>
-            <div class="my-shukran-card">
-              <img
-                src="https://res.cloudinary.com/stylika/image/upload/v1660925021/success_page_yipsdm.jpg"
-                alt="train"
-              />
-            </div>
-            <div class="my-shukran-card">
-              <img
-                src="https://res.cloudinary.com/stylika/image/upload/v1660925021/rating_page_mpkd2i.jpg"
-                alt="train"
-              />
-            </div>
-            <div class="my-shukran-card">
-              <img
-                src="https://res.cloudinary.com/stylika/image/upload/v1660925021/profile_page_rlq7lq.jpg"
-                alt="train"
-              />
+          <div class="portfolio-media">
+            <div class="card-shukran-carousel">
+              <div class="my-shukran-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660925021/login_lwtt93.jpg"
+                alt="Shukran login screen"
+                loading="lazy"
+              /></div>
+              <div class="my-shukran-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660925022/dashboard_xqrjeh.jpg"
+                alt="Shukran dashboard screen"
+                loading="lazy"
+              /></div>
+              <div class="my-shukran-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660925022/search_sw_yvziql.jpg"
+                alt="Shukran restaurant search screen"
+                loading="lazy"
+              /></div>
+              <div class="my-shukran-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660925022/amount_select_tdz7jp.jpg"
+                alt="Shukran tip amount selection screen"
+                loading="lazy"
+              /></div>
+              <div class="my-shukran-card">
+                <img
+                  src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660925021/success_page_yipsdm.jpg"
+                  alt="Shukran payment success screen"
+                  loading="lazy"
+                />
+              </div>
+              <div class="my-shukran-card">
+                <img
+                  src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660925021/rating_page_mpkd2i.jpg"
+                  alt="Shukran restaurant rating screen"
+                  loading="lazy"
+                />
+              </div>
+              <div class="my-shukran-card">
+                <img
+                  src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660925021/profile_page_rlq7lq.jpg"
+                  alt="Shukran user profile screen"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -330,40 +393,37 @@
               </ul>
             </div>
           </div>
-          <div class="card-bus-carousel">
-            <!-- <div class="my-bus-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660899946/brand_index_page_light_ywt87d.png"
-              alt="train"
-              border="0"
-            /></div> -->
-            <div class="my-bus-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660900026/bus_01_w2hgr5.png"
-              alt="train"
-              border="0"
-            /></div>
-            <div class="my-bus-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660900029/bus_search_oekpxu.jpg"
-              alt="train"
-              border="0"
-            /></div>
-            <div class="my-bus-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660900036/bus_allocation_02_aoylp6.png"
-              alt="train"
-              border="0"
-            /></div>
-            <div class="my-bus-card">
-              <img
-                src="https://res.cloudinary.com/stylika/image/upload/v1660900040/bus_passenger_01_lgsivs.png"
-                alt="train"
-                border="0"
-              />
-            </div>
-            <div class="my-bus-card">
-              <img
-                src="https://res.cloudinary.com/stylika/image/upload/v1660903639/bus_passenger_02_gn2y16.png"
-                alt="train"
-                border="0"
-              />
+          <div class="portfolio-media">
+            <div class="card-bus-carousel">
+              <div class="my-bus-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660900026/bus_01_w2hgr5.png"
+                alt="Book A Bus landing screen"
+                loading="lazy"
+              /></div>
+              <div class="my-bus-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660900029/bus_search_oekpxu.jpg"
+                alt="Book A Bus search results screen"
+                loading="lazy"
+              /></div>
+              <div class="my-bus-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660900036/bus_allocation_02_aoylp6.png"
+                alt="Book A Bus seat allocation screen"
+                loading="lazy"
+              /></div>
+              <div class="my-bus-card">
+                <img
+                  src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660900040/bus_passenger_01_lgsivs.png"
+                  alt="Book A Bus passenger details screen"
+                  loading="lazy"
+                />
+              </div>
+              <div class="my-bus-card">
+                <img
+                  src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660903639/bus_passenger_02_gn2y16.png"
+                  alt="Book A Bus checkout screen"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -371,7 +431,7 @@
           <div
             class="portfolio-description-row"
             data-aos="fade-right"
-            data-aos-delay="1200"
+            data-aos-delay="400"
           >
             <div
               class="portfolio-description"
@@ -396,41 +456,31 @@
               </ul>
             </div>
           </div>
-          <div class="card-carousel">
-            <div class="my-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660900050/landing_madaraka_ou8zgv.jpg"
-              alt="train"
-              border="0"
-            /></div>
-            <div class="my-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660900061/trains_checkout_one_zvc34w.jpg"
-              alt="train"
-              border="0"
-            /></div>
-            <div class="my-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660900067/train_checkout_2_b7wntn.jpg"
-              alt="train"
-              border="0"
-            /></div>
-            <!-- <div class="my-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1634206483/trains_flow_njn2oy.png"
-              alt="train"
-              border="0"
-            /></div>
-            <div class="my-card">
-              <img
-            src="https://res.cloudinary.com/stylika/image/upload/v1634206483/trains_flow_njn2oy.png"
-            alt="train"
-            border="0"
-          />
-            </div> -->
+          <div class="portfolio-media">
+            <div class="card-carousel">
+              <div class="my-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660900050/landing_madaraka_ou8zgv.jpg"
+                alt="Madaraka Express landing screen"
+                loading="lazy"
+              /></div>
+              <div class="my-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660900061/trains_checkout_one_zvc34w.jpg"
+                alt="Madaraka Express seat checkout screen"
+                loading="lazy"
+              /></div>
+              <div class="my-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660900067/train_checkout_2_b7wntn.jpg"
+                alt="Madaraka Express payment checkout screen"
+                loading="lazy"
+              /></div>
+            </div>
           </div>
         </div>
         <div class="portfolio-item">
           <div
             class="portfolio-description-row"
-            data-aos="fade-right"
-            data-aos-delay="1200"
+            data-aos="fade-left"
+            data-aos-delay="400"
           >
             <div
               class="portfolio-description"
@@ -455,34 +505,35 @@
               </ul>
             </div>
           </div>
-          <div class="card-flight-carousel">
-            <div class="my-flight-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660899946/brand_index_page_light_ywt87d.png"
-              alt="train"
-              border="0"
-            /></div>
-            <div class="my-flight-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660899955/brand_landing_eg1zbw.png"
-              alt="train"
-              border="0"
-            /></div>
-            <div class="my-flight-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660899963/brand_search_results_p5kzkh.png"
-              alt="train"
-              border="0"
-            /></div>
-            <div class="my-flight-card"><img
-              src="https://res.cloudinary.com/stylika/image/upload/v1660900012/brand_flight_checkout_one_fhg0ge.png"
-              alt="train"
-              border="0"
-            /></div>
-            
-            <div class="my-flight-card">
-              <img
-                src="https://res.cloudinary.com/stylika/image/upload/v1660903631/flight_checkout_kiwi_xbd2sl.png"
-                alt="train"
-                border="0"
-              />
+          <div class="portfolio-media">
+            <div class="card-flight-carousel">
+              <div class="my-flight-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660899946/brand_index_page_light_ywt87d.png"
+                alt="Book A Flight landing screen"
+                loading="lazy"
+              /></div>
+              <div class="my-flight-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660899955/brand_landing_eg1zbw.png"
+                alt="Book A Flight destination selection screen"
+                loading="lazy"
+              /></div>
+              <div class="my-flight-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660899963/brand_search_results_p5kzkh.png"
+                alt="Book A Flight search results screen"
+                loading="lazy"
+              /></div>
+              <div class="my-flight-card"><img
+                src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660900012/brand_flight_checkout_one_fhg0ge.png"
+                alt="Book A Flight checkout screen"
+                loading="lazy"
+              /></div>
+              <div class="my-flight-card">
+                <img
+                  src="https://res.cloudinary.com/stylika/image/upload/f_auto,q_auto,w_400/v1660903631/flight_checkout_kiwi_xbd2sl.png"
+                  alt="Book A Flight Kiwi payment checkout screen"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>   
@@ -496,7 +547,7 @@
         </div>
         <div
           class="timeline"
-          style="margin-bottom: 3vh;"
+          style="margin-bottom: 2rem;"
           data-aos="fade-down"
           data-aos-delay="200"
         >
@@ -543,23 +594,12 @@
       </div>
       <p>&copy; <span id="year"></span> Paul Morogo</p>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./replaceme.min.js"></script>
-    <!-- ReplaceMe for rotating text -->
-    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="./replaceme.min.js" defer></script>
+    <script src="main.js" defer></script>
     <script>
-      
-      let yearSpan = document.getElementById('year');
-      let newDate = new Date().getFullYear()
-      yearSpan.innerHTML = newDate;
-      function toast() {
-        let x = document.getElementById('snackbar');
-        x.className = 'show';
-        setTimeout(function () {
-          x.className = x.className.replace('show', '');
-        }, 3000);
-      }
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

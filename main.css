@@ -12,9 +12,15 @@
   --white: #fff;
   --gray: #767575;
   --gray-dark: #434242;
-  /* --primary: #a90000; */
-  --primary: #FE0000;
-  --secondary: #000;
+  /* --primary: #FE0000; */
+  --primary: #f5a524;
+  --secondary: #0e1116;
+  --surface: #171b22;
+  --surface-2: #1f2530;
+  --surface-glass: rgba(23, 27, 34, 0.82);
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #e8e6e3;
+  --muted: #9aa3ad;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -51,28 +57,29 @@
 html {
   font-size: 10px;
   font-family: var(--Oswald-font-family), cursive;
-  color: var(--white);
+  color: var(--text);
 }
 
 body {
   width: 100%;
   height: 100%;
-  background: url("https://images.unsplash.com/photo-1602761906274-de42787fae3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80")
-    no-repeat center fixed;
+  /* background: url("https://images.unsplash.com/photo-1602761906274-de42787fae3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80")
+    no-repeat center fixed; */
   /* background: url("https://images.unsplash.com/photo-1604171256342-9945bfa74c4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80") no-repeat center fixed; */
   /* background: url("https://images.unsplash.com/photo-1483104879057-379b6c2fe5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80") no-repeat center fixed; */
   /* background: url("https://images.unsplash.com/photo-1559999831-7deaf136d4a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80")
     no-repeat center fixed; */
   background-size: cover;
+  background-color: var(--secondary);
 }
 
 section {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 
 a {
   text-decoration: none;
-  color: #111111;
+  color: var(--secondary);
 }
 
 p {
@@ -103,11 +110,11 @@ h6 {
 }
 .section-heading {
   text-align: center;
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
 }
 .section-heading h1 {
   font-size: 3.5rem;
-  color: var(--secondary);
+  color: var(--text);
   text-transform: uppercase;
   font-weight: 300;
   position: relative;
@@ -120,7 +127,7 @@ h6 {
   bottom: -0.5rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(147, 1, 1, 0.75);
+  background-color: var(--primary);
 }
 .section-heading h1::before {
   width: 10rem;
@@ -136,7 +143,8 @@ h6 {
 .section-heading h6 {
   font-size: 1.6rem;
   font-weight: 300;
-  margin-bottom: 6rem;
+  color: var(--muted);
+  margin-top: 2rem;
 }
 .has-margin-right {
   margin: 5rem;
@@ -146,7 +154,20 @@ h6 {
 /*start header*/
 header {
   width: 100%;
-  height: 100vh;
+  position: relative;
+  padding: 13rem 0 5rem;
+  background: radial-gradient(
+    ellipse at 20% 0%,
+    rgba(245, 165, 36, 0.14),
+    transparent 60%
+  );
+}
+
+.hero {
+  display: flex;
+  align-items: stretch;
+  gap: 2.5rem;
+  height: auto;
 }
 
 .top-nav {
@@ -163,11 +184,12 @@ header {
 
 .nav-list {
   list-style: none;
+  width: 30%;
   /* width: 100%;
   height: 100%; */
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
+  /* justify-content: space-between; */
+  align-items: center;
   font-family: var(--Bebas-font-family), sans-serif;
 }
 .top-nav-list {
@@ -192,6 +214,7 @@ header {
 .nav-link:hover,
 .nav-link:focus {
   color: var(--white);
+  text-shadow: 0 0 1px var(--secondary);
 }
 
 .top-nav.open {
@@ -246,23 +269,28 @@ header {
   transform: rotate(-450deg) translateX(-0.8rem);
 }
 
+.landing-text,
+.about-side-panel {
+  background-color: var(--surface-glass);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  padding: 3rem;
+}
+
 .landing-text {
-  position: absolute;
-  background-color: transparent;
-  padding: 20px;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
+  flex: 1.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   z-index: 1;
 }
 
 .landing-text .landing-text-title {
-  font-size: 15rem;
+  font-size: clamp(5rem, 8vw, 10rem);
+  line-height: 1;
   text-transform: uppercase;
   color: var(--primary);
-  padding: 5rem 0 1rem 0;
+  padding: 0 0 1.5rem 0;
   user-select: none;
 }
 
@@ -276,6 +304,7 @@ header {
 .landing-text h6 {
   font-size: 2rem;
   font-weight: 400;
+  color: var(--muted);
   text-transform: uppercase;
 }
 /*End header*/
@@ -288,9 +317,9 @@ header {
   display: flex;
   justify-content: center;
   border-radius: 1.3em;
-  height: 100vh;
+  height: auto;
   background-color: var(--secondary);
-  color: var(--white);
+  color: var(--text);
   width: 100%;
 }
 
@@ -302,7 +331,7 @@ header {
 .about-heading {
   font-size: 24px;
   text-transform: uppercase;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
 }
 .about-heading h4 {
   font-size: 7rem;
@@ -311,11 +340,12 @@ header {
 .about-heading h6 {
   font-size: 2rem;
   font-weight: 300;
+  color: var(--muted);
 }
 .profile-img {
   flex: 1;
   border-radius: 13em;
-  margin-right: 5rem;
+  margin-right: 4rem;
   max-width: 20%;
   height: auto;
 }
@@ -326,20 +356,22 @@ header {
   justify-content: space-between;
 }
 .about-details .about-brief {
-  max-height: 60%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 .about-details .about-panel {
-  width: 56ch;
+  width: 100%;
+  max-width: 72rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 30px;
+}
+.about-details .about-text {
+  display: flex;
+  flex-direction: column;
 }
 .about-details .about-panel p {
-  margin: 10px;
+  margin: 0 0 1rem;
   width: 100%;
 }
 .about-details .about-panel p strong {
@@ -351,40 +383,54 @@ header {
   font-size: 28px;
   text-transform: uppercase;
 }
-.about-details .about-side-panel {
+.about-side-panel {
+  flex: 1;
   display: flex;
   flex-direction: column-reverse;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
-.about-details .about-side-panel .about-spirit-animal {
+.about-side-panel .about-spirit-animal {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  max-width: 50ch;
-  margin-top: 2rem;
   align-items: center;
 }
-.about-details .about-side-panel img {
-  width: 100px;
+.about-side-panel .about-spirit-animal-title h1 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.about-side-panel img {
+  width: 72px;
   height: auto;
   margin: 0 0 0 20px;
 }
-.about-details .about-side-panel p {
-  width: 50ch;
-}
-.about-details .about-side-panel span {
+.about-side-panel span {
   color: var(--primary);
-  font-size: 28px;
+  font-size: 2.4rem;
   text-transform: uppercase;
 }
 .social-media {
-  margin-top: 5rem;
+  margin-top: 0;
+}
+.social-media .nav-list {
+  flex-direction: row;
+}
+.social-media .nav-list li {
+  margin: 0;
+}
+.social-media .nav-list li:nth-child(2) {
+  margin-left: 2rem;
 }
 .social-media i {
-  font-size: 5rem;
+  font-size: 4rem;
   transition: color 650ms;
 }
 .fa-linkedin {
-  color: var(--white);
+  color: var(--lightgray);
 }
 .fa-octopus-deploy {
   color: var(--lightgray);
@@ -399,58 +445,68 @@ header {
 /*End About*/
 
 /*Start Services*/
+.services {
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
 .services span {
-  font-size: 2.5rem;
+  display: inline-block;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--white);
-  padding: 10px;
-  background-color: var(--secondary);
+  color: var(--secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 0.4rem;
+  background-color: var(--primary);
 }
 .services h1 {
-  color: var(--white);
-}
-.my-basic-skills {
-  margin: 2rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  grid-gap: 2.5rem;
+  color: var(--text);
 }
 .my-intermediate-skills {
-  margin: 2rem 0;
+  margin: 1.5rem 0 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  grid-gap: 2.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  grid-gap: 1.5rem;
 }
 .my-advanced-skills {
-  margin: 2rem 0;
+  margin: 1.5rem 0 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  grid-gap: 2.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  grid-gap: 1.5rem;
 }
 .skill {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem;
+  background-color: var(--surface-2);
+  border-radius: 0.8rem;
 }
 .skill h1 {
+  font-size: 1.6rem;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin: 2rem -2px 2rem 0;
+  margin: 0 -2px 0 0;
 }
 .icon-container {
-  width: 8rem;
-  height: 8rem;
-  border: 5px solid var(--secondary);
-  background-color: var(--primary);
-  margin-bottom: 2rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  border: 2px solid var(--primary);
+  border-radius: 0.8rem;
+  margin-bottom: 1.2rem;
   display: flex;
   /* transform: rotate(45deg); */
 }
+.icon-container img {
+  width: 60%;
+  margin: auto;
+}
 .icon-container i {
-  color: var(--secondary);
-  font-size: 5rem;
+  color: var(--text);
+  font-size: 3.6rem;
   margin: auto;
   /* transform: rotate(-45deg); */
 }
@@ -466,28 +522,38 @@ header {
 .portfolio-item {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 4rem 0;
-  border-bottom: 1px solid var(--primary);
+  gap: 3rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
 .portfolio-item:last-child {
   margin-bottom: 0;
+  border-bottom: none;
+}
+/* .section-heading is child 1, so odd children are the 2nd, 4th... projects */
+.portfolio-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.portfolio-media {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
 }
 .portfolio-img {
   max-width: 50rem;
 }
 
 .portfolio-description-row {
+  flex: 0 0 38%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .portfolio-description {
-  width: 60ch;
-  padding: 2rem 1.5rem;
+  padding: 1rem 0;
 }
 .portfolio-description ul {
   font-size: 1.5rem;
@@ -497,7 +563,7 @@ header {
 }
 .portfolio-description h2 {
   font-size: 2rem;
-  color: var(--gray-dark);
+  color: var(--muted);
   text-transform: uppercase;
 }
 .portfolio-description h1 {
@@ -520,8 +586,8 @@ header {
 .portfolio-description a {
   padding: 0 3rem 0 0;
 }
-.portfolio-description a:hover {
-  color: #45a29e;
+.portfolio-description a:hover span {
+  color: var(--text);
 }
 .portfolio-description .cta {
   display: inline-block;
@@ -538,12 +604,12 @@ header {
 /*End Portfolio */
 /*Start timeline*/
 .timeline ul {
-  border-left: 8px solid var(--secondary);
+  border-left: 4px solid var(--primary);
   /* border-radius: 0.8rem; */
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--surface-2);
   margin: 0 auto;
   position: relative;
-  padding: 5rem;
+  padding: 3rem;
   list-style: none;
   text-align: left;
   width: 70%;
@@ -553,7 +619,7 @@ header {
   text-transform: uppercase;
   font-weight: 300;
   margin-bottom: 1rem;
-  color: var(--secondary);
+  color: var(--primary);
 }
 .timeline date {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -579,10 +645,11 @@ header {
   text-align: right;
   min-width: 12rem;
   font-size: 1.5rem;
+  color: var(--muted);
 }
 .timeline .date::after {
   content: "";
-  box-shadow: 0 0 0 4px var(--white);
+  box-shadow: 0 0 0 4px var(--secondary);
   border-radius: 100%;
   left: -1rem;
   height: 1.5rem;
@@ -591,24 +658,33 @@ header {
 }
 /*End timeline*/
 .experience {
-  background-color: var(--primary);
+  background-color: var(--surface);
   height: 100%;
-  border-bottom: 10px solid var(--secondary);
+  border-top: 1px solid var(--border);
 }
 /* contact section */
+.contact {
+  background-color: var(--secondary);
+}
 .contact .container{
-  height: 30vh;
-  margin: 2rem auto 0;
+  height: auto;
+  margin: 0 auto;
 }
 .contact .container .section-heading {
   height: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+}
+.contact .container .section-heading .compose {
+  margin-top: 3rem;
 }
 
 .contact .container .section-heading  .compose  a span {
   font-size: large;
-  padding: 2rem 1rem;
+  padding: 1.2rem 2rem;
+  border-radius: 0.6rem;
+  border: 2px solid var(--primary);
   background-color: var(--primary);
+  transition: all 300ms;
 }
 .contact .container .section-heading  .compose a span:hover {
   background-color: var(--secondary);
@@ -618,10 +694,11 @@ header {
 .copyright {
   width: 100%;
   text-align: center;
-  background-color: var(--secondary);
-  padding: 5rem 0;
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 3rem 0;
   position: relative;
-  color: var(--primary);
+  color: var(--muted);
 }
 .up {
   position: absolute;
@@ -636,7 +713,7 @@ header {
   cursor: pointer;
 }
 .up i {
-  color: #16162d;
+  color: var(--secondary);
   font-size: 2rem;
   margin: auto;
 }
@@ -1147,16 +1224,72 @@ header {
   color: var(--primary);
 }
 /*End carousel*/
+/* Gavanpass Carousel (landscape screenshots) */
+.card-gavanpass-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Each card takes most of the width; neighbours peek in from the sides */
+.card-gavanpass-carousel .my-gavanpass-card {
+  height: 100%;
+  flex: 0 0 75%;
+  position: relative;
+  z-index: 1;
+  transform: scale(0.6) translateY(-2rem);
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 1s;
+}
+
+.card-gavanpass-carousel .my-gavanpass-card.active {
+  z-index: 3;
+  transform: scale(1) translateY(0) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card-gavanpass-carousel .my-gavanpass-card.prev,
+.card-gavanpass-carousel .my-gavanpass-card.next {
+  z-index: 2;
+  transform: scale(0.8) translateY(-1rem) translateX(0);
+  opacity: 0.6;
+  pointer-events: auto;
+}
+
+.card-gavanpass-carousel .my-gavanpass-card img {
+  border-radius: 0.6rem;
+}
+
+.card-gavanpass-carousel .my-gavanpass-card:before {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--primary);
+}
+.card-gavanpass-carousel .my-gavanpass-card:nth-child(1):before {
+  content: "Landing Page";
+}
+.card-gavanpass-carousel .my-gavanpass-card:nth-child(2):before {
+  content: "Trips Page";
+}
+.card-gavanpass-carousel .my-gavanpass-card:nth-child(3):before {
+  content: "Admin";
+}
+/*End Gavanpass carousel*/
 /*Start animation*/
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 var(--primary);
   }
   70% {
-    box-shadow: 0 0 0 2rem rgba(177, 1, 1, 0);
+    box-shadow: 0 0 0 2rem rgba(245, 165, 36, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(133, 1, 3, 0);
+    box-shadow: 0 0 0 0 rgba(245, 165, 36, 0);
   }
 }
 /*end animation*/
@@ -1244,15 +1377,14 @@ header {
   .about-details {
     flex-direction: column;
   }
-  .about-details .about-side-panel .about-spirit-animal {
+  .hero {
+    flex-direction: column;
+  }
+  .about-side-panel .about-spirit-animal {
     justify-content: start;
-    margin-top: 3rem;
   }
   .top-nav-list {
     flex-direction: column;
-  }
-  .landing-text .landing-text-title {
-    font-size: 12rem;
   }
   .timeline .date::before {
     font-size: 1.4rem;
@@ -1261,11 +1393,17 @@ header {
   }
 }
 @media screen and (max-width: 768px) {
-  .landing-text .landing-text-title {
-    font-size: 9rem;
+  header {
+    padding-top: 10rem;
   }
-  .portfolio-description-row{
+  .portfolio-item,
+  .portfolio-item:nth-child(odd) {
     flex-direction: column;
+  }
+  .portfolio-description-row,
+  .portfolio-media {
+    flex-basis: auto;
+    width: 100%;
   }
   .nav-list {
     flex-direction: column;
@@ -1285,11 +1423,11 @@ header {
   .section-heading h1 {
     font-size: 3rem;
   }
-  .about-details .nav-list {
+  .social-media .nav-list {
     flex-direction: row;
   }
-  .about-details li {
-    margin: 0 2rem;
+  .social-media li {
+    margin: 0;
   }
   .icon-container {
     width: 7rem;
@@ -1314,8 +1452,9 @@ header {
     top: 2rem;
     right: 2rem;
   }
-  .landing-text .landing-text-title {
-    font-size: 6rem;
+  .landing-text,
+  .about-side-panel {
+    padding: 2rem;
   }
   .landing-text h6 {
     font-size: 1.4rem;
@@ -1328,10 +1467,10 @@ header {
   }
   .about .container {
     flex-direction: column;
-    padding: 40px 10px 0;
+    padding: 0 10px;
   }
   .profile-img {
-    margin: 2rem 0 7rem 0;
+    margin: 0 0 3rem 0;
   }
   .about-details {
     order: 1;
